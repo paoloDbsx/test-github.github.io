@@ -1,8 +1,9 @@
 header {
   position: relative;
+  display: block;
+  text-align: center;
 }
-
-nav {
+header nav {
   display: flex;
   margin: 0 auto;
   justify-content: space-evenly;
@@ -13,16 +14,25 @@ nav {
   background-color: rgba(30, 32, 57, 0.7);
   padding: 50px;
 }
-nav a {
+header nav a {
   color: whitesmoke;
   font-weight: 900;
   text-decoration: underline;
   transition: 0.3s;
   padding: 10px;
 }
-nav a:hover {
+header nav a:hover {
   background-color: tomato;
   transform: scale(1.2);
+}
+header h1 {
+  color: whitesmoke;
+  font-size: 60px;
+  left: 0;
+  right: 0;
+  top: 350px;
+  position: absolute;
+  z-index: 121;
 }
 
 img {
@@ -34,7 +44,6 @@ img {
   margin: 0 auto;
   max-width: 100%;
   aspect-ratio: 3/2;
-  border: 5px solid hsl(0deg, 0%, 100%);
   box-shadow: 0 0 5px hsla(0deg, 0%, 0%, 0.29);
   overflow: hidden;
   position: relative;
@@ -54,23 +63,23 @@ img {
   mask-image: linear-gradient(to right, red, red);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
-  animation: slideshow 25s linear infinite;
+  animation: slideshow 60s linear infinite;
 }
 
 .slideshow img:nth-child(2) {
-  animation-delay: 5s;
+  animation-delay: 12s;
 }
 
 .slideshow img:nth-child(3) {
-  animation-delay: 10s;
+  animation-delay: 24s;
 }
 
 .slideshow img:nth-child(4) {
-  animation-delay: 15s;
+  animation-delay: 36s;
 }
 
 .slideshow img:nth-child(5) {
-  animation-delay: 20s;
+  animation-delay: 48s;
 }
 
 @keyframes slideshow {
