@@ -1,26 +1,98 @@
-header nav {
+header {
+  position: relative;
+}
+
+nav {
   display: flex;
   margin: 0 auto;
   justify-content: space-evenly;
   position: absolute;
-  z-index: index 2;
+  z-index: 120;
   left: 0;
   right: 0;
   background-color: rgba(30, 32, 57, 0.7);
   padding: 50px;
 }
-header nav a {
+nav a {
   color: whitesmoke;
   font-weight: 900;
   text-decoration: underline;
   transition: 0.3s;
   padding: 10px;
 }
-header nav a:hover {
+nav a:hover {
   background-color: tomato;
   transform: scale(1.2);
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.slideshow {
+  margin: 0 auto;
+  max-width: 100%;
+  aspect-ratio: 3/2;
+  border: 5px solid hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 5px hsla(0deg, 0%, 0%, 0.29);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.slideshow img {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to right, red, red);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: linear-gradient(to right, red, red);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  animation: slideshow 25s linear infinite;
+}
+
+.slideshow img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slideshow img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.slideshow img:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.slideshow img:nth-child(5) {
+  animation-delay: 20s;
+}
+
+@keyframes slideshow {
+  0%, 100% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    -webkit-mask-position: 200% 0%;
+    -webkit-mask-size: 100% 100%;
+    mask-position: 200% 0%;
+    mask-size: 100% 100%;
+  }
+  25% {
+    opacity: 0;
+    -webkit-mask-size: 0% 100%;
+    mask-size: 0% 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
