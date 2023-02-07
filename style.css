@@ -1,0 +1,35 @@
+header nav {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  position: absolute;
+  z-index: index 2;
+  left: 0;
+  right: 0;
+  background-color: rgba(30, 32, 57, 0.7);
+  padding: 50px;
+}
+header nav a {
+  color: whitesmoke;
+  font-weight: 900;
+  text-decoration: underline;
+  transition: 0.3s;
+  padding: 10px;
+}
+header nav a:hover {
+  background-color: tomato;
+  transform: scale(1.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: open, sans-serif;
+  line-height: 1.8;
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=style.css.map */

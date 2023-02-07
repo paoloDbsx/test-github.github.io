@@ -1,0 +1,24 @@
+header{
+    nav{
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        position: absolute;
+        z-index: index 2;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 32, 57, 0.7);
+        padding: 50px;
+        a{
+            color:whitesmoke; 
+            font-weight: 900;
+            text-decoration: underline;
+            transition: 0.3s;
+            padding: 10px;
+        }
+        a:hover{
+            background-color: tomato;
+            transform: scale(1.2);
+        }
+    }
+}
